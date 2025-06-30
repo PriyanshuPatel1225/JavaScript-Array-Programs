@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>JavaScript Array Programs by Priyanshu Patel</title>
+  <style>
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background: #e3f2fd;
+      color: #333;
+    }
+    h2 {
+      text-align: center;
+      margin: 20px;
+      color: #0d47a1;
+    }
+    .program-card {
+      background: #ffffff;
+      margin: 15px auto;
+      padding: 15px;
+      border-radius: 8px;
+      border-left: 10px solid #1976d2;
+      box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+      max-width: 600px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .program-card:hover {
+      transform: translateY(-4px);
+      box-shadow: 0 8px 16px rgba(0,0,0,0.2);
+    }
+    h3 {
+      margin-top: 0;
+      color: #1565c0;
+      font-size: 1.2rem;
+      border-bottom: 2px solid #64b5f6;
+      padding-bottom: 5px;
+    }
+    .input, .output {
+      background: #f1f8e9;
+      border: 1px solid #c5e1a5;
+      padding: 8px;
+      border-radius: 4px;
+      margin: 5px 0;
+      overflow-wrap: break-word;
+      color: #33691e;
+    }
+    .output {
+      background: #fff3e0;
+      border: 1px solid #ffcc80;
+      color: #e65100;
+    }
+    .label {
+      font-weight: bold;
+      margin-top: 10px;
+      display: block;
+      color: #0d47a1;
+    }
+    footer {
+      text-align: center;
+      margin: 30px 0 20px;
+      color: #0d47a1;
+      font-size: 0.9rem;
+    }
+    @media (max-width: 600px) {
+      h2 { font-size: 1.5rem; }
+      .program-card { padding: 12px; }
+    }
+  </style>
+</head>
+<body>
+  <h2>JavaScript Array Programs by Priyanshu Patel</h2>
+
+  <div id="program1" class="program-card"></div>
+  <div id="program2" class="program-card"></div>
+  <div id="program3" class="program-card"></div>
+
+  <footer>Created by Priyanshu Patel</footer>
+
+  <script>
+    // 1. Sort a JavaScript Array
+    const numbers = [5, 2, 9, 1, 7];
+    const sorted = [...numbers].sort((a, b) => a - b);
+    document.getElementById("program1").innerHTML = `
+      <h3>1. Sort a JavaScript Array</h3>
+      <span class="label">Input:</span>
+      <div class="input">${JSON.stringify(numbers)}</div>
+      <span class="label">Output:</span>
+      <div class="output">${JSON.stringify(sorted)}</div>`;
+
+    // 2. Concatenate two arrays
+    const arr1 = [1, 2, 3];
+    const arr2 = [4, 5, 6];
+    const combined = arr1.concat(arr2);
+    document.getElementById("program2").innerHTML = `
+      <h3>2. Concatenate Two Arrays</h3>
+      <span class="label">Input:</span>
+      <div class="input">Array 1: ${JSON.stringify(arr1)}<br>Array 2: ${JSON.stringify(arr2)}</div>
+      <span class="label">Output:</span>
+      <div class="output">${JSON.stringify(combined)}</div>`;
+
+    // 3. Remove first element
+    const fruits = ["Apple", "Banana", "Mango"];
+    const removed = fruits.shift();
+    document.getElementById("program3").innerHTML = `
+      <h3>3. Remove First Element from Array</h3>
+      <span class="label">Input:</span>
+      <div class="input">${JSON.stringify(["Apple", "Banana", "Mango"])}</div>
+      <span class="label">Output:</span>
+      <div class="output">Removed: ${removed}<br>Remaining: ${JSON.stringify(fruits)}</div>`;
+  </script>
+</body>
+</html>
